@@ -1,0 +1,267 @@
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffe766;
+  font-family: 'Open Sans', sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.BotaoDeVoltar{
+  height: 20px;
+  width: 20px;
+  position: relative;
+  top: -20px;
+  left: -410px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+
+
+.conteudos {
+  width: 40%;
+  margin-right: 4rem;
+
+  padding-left: 1rem;
+}
+
+
+
+.subtitulo h3 {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: 'Comfortaa', cursive;
+  margin-bottom: 20px;
+}
+
+
+.conteudo form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* CONJUNTOS */
+
+.conjunto1,
+.conjunto2,
+.conjunto3 {
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+.conjunto1,
+.conjunto2,
+label {
+  color: black;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.conjunto1,
+.conjunto2,
+input {
+  outline: none;
+  border: #483698;
+  width: 70%;
+}
+
+/* PRIMEIRO CONJUNTO */
+.conjunto1 {
+  margin-bottom: 2rem;
+}
+
+.conjunto1 label {
+  font-size: .9rem;
+  margin-bottom: .5rem;
+}
+
+.conjunto1 select {
+  border: 2px solid #483698;
+  height: 2rem;
+  width: 22rem;
+  outline: none;
+  border-radius: .2rem;
+}
+
+.conjunto1 select::selection {
+  text-align: center;
+}
+
+/* segundo conjunto */
+.conjunto2 {
+  margin-bottom: 1rem;
+
+}
+
+.conjunto2 label {
+  font-size: .9rem;
+  margin-bottom: 10px;
+}
+
+.conjunto2 div {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.conjunto2 p {
+  background-color: #483698;
+  color: #fff;
+  width: 3rem;
+  height: 2rem;
+  border-radius: .5rem 0rem 0rem .5rem;
+
+  font-size: 1.1rem;
+  text-align: center;
+  margin: 0;
+}
+
+.conjunto2 div input {
+  border: 2px solid #483698;
+  height: 1.6rem;
+  width: 15rem;
+}
+
+/* conjunto 3 */
+
+
+.conjunto3 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  width: 22rem;
+
+}
+
+.formasDePagamento {
+  display: flex;
+  align-items: flex-start;
+
+  flex-direction: column;
+}
+
+.conjunto3 label {
+  font-size: .9rem;
+}
+
+
+.conjunto3 .forma1,
+.forma2,
+.forma3 {
+  opacity: .8;
+  margin-bottom: .4rem;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, .6);
+  background-color: #f9f9f9;
+
+  display: flex;
+  width: 22rem;
+  padding: .4rem 0rem;
+  border-radius: .4rem;
+}
+
+.conjunto3 .forma1 input,
+.forma2 input,
+.forma3 input {
+  width: 20%;
+}
+
+.conjunto3 .forma1 label,
+.forma2 label,
+.forma3 label {
+  width: 80%;
+}
+
+
+
+.botaDeProximo {
+  margin-top: 10px;
+  background-color: #483698;
+  color: #fff;
+  text-transform: uppercase;
+  width: 22rem;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 1.5rem;
+  height: 1.5rem;
+  font-weight: 600;
+  transition: all .4s;
+  text-decoration: none;
+
+}
+
+.botaDeProximo:hover{
+  background-color: #fff;
+  color: #483698;
+  border: 0px solid #483698;
+
+}
+
+
+.infoNext {
+  width: 22rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.infoNext .range {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  justify-content: space-evenly;
+}
+
+.infoNext .range .barra {
+  flex: 1;
+  text-align: center;
+  color: #483698;
+  text-align: start;
+  width: 100%;
+}
+
+.infoNext .range .barra input {
+  appearance: none;
+  text-align: start;
+  display: block;
+  background-color: #483698;
+  border-radius: 0px 2px 2px 0px;
+  width: 100%;
+}
+
+.infoNext .contagem {
+  color: #483698;
+  font-weight: bold;
+  width: 80px;
+  text-align: end;
+}
+
+
+/*  Segundo lado */
+
+.img {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.img img {
+
+  width: 95%;
+  height: 70%;
+  
+}
+
+

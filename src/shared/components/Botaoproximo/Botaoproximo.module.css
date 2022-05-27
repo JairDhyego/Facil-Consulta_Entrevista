@@ -1,0 +1,25 @@
+
+.botaDeProximo {
+  margin-top: 10px;
+  background-color: #483698;
+  color: #fff;
+  text-transform: uppercase;
+  width: 22rem;
+  border-radius: 10px;
+  text-align: center;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  transition: all .4s;
+  text-decoration: none;
+}
+
+.botaDeProximo:hover {
+  background-color: #fff;
+  color: #483698;
+  border: 0px solid #483698;
+}
+
+.especiais {
+  background: none;
+}

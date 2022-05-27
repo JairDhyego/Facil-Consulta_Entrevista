@@ -1,0 +1,40 @@
+.containerFinal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.containerFinal h1{
+  font-family: 'Comfortaa', cursive;
+  color: #483698;
+  font-weight: bolder;
+  font-size: 30px;
+  text-align: center;
+  
+}
+
+.sair {
+  margin-top: 10px;
+  background-color: #fbde40;
+  color: #fff;
+  text-transform: uppercase;
+  width: 22rem;
+  border-radius: 10px;
+  text-align: center;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  transition: all .4s;
+  text-decoration: none;
+
+
+}
+
+.sair:hover {
+  background-color: #fff;
+  color: #fbde40;
+  border: 0px solid #fbde40;
+
+}

@@ -1,0 +1,43 @@
+
+
+.infoNext {
+  width: 22rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.infoNext .range {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.infoNext .range .barra {
+  flex: 1;
+  text-align: center;
+  color: #483698;
+  text-align: start;
+  width: 100%;
+}
+
+.infoNext .range .barra input {
+  appearance: none;
+  text-align: start;
+  display: block;
+  background-color: #483698;
+  border-radius: 2px 0px 0px 2px;
+  
+}
+
+/* .infoNext .range .barra input::-webkit-slider-thumb {
+   
+ }
+ */
+
+ 
+.infoNext .contagem {
+  color: #483698;
+  font-weight: bold;
+  width: 80px;
+  text-align: end;
+}

@@ -1,0 +1,45 @@
+
+@media screen and (max-width: 420px) { 
+
+  body{
+    font-size: 16px;
+    height: 100vh;
+    background-color: #ffe766;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main{
+    max-width: 280px;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem 2rem 0rem 0rem;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+     
+  }
+
+  main div h1 {
+    font-size: 5px;
+  }
+
+  h3{
+    font-size: 10px;
+  }
+
+  .conteudos {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+
+
+  .img, img{
+    display: none;
+  }
+}
