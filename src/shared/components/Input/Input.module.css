@@ -1,0 +1,23 @@
+.textInput {
+  border: 1px solid #483698;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  outline: none;
+  border-radius: .2rem;
+  color: #282828;
+  
+
+}
+
+.textInput::placeholder{
+  color: #b9b9b9;
+  padding: 0rem .1rem;
+}
+
+
+
+.label {
+  font-weight: 600;
+  font-size: .8rem;
+  margin-bottom: .1rem;
+}

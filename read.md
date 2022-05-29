@@ -1,0 +1,3 @@
+Falaa meu 🐙, como cês tão? então, tive a oportunidade de fazer uma entrevista de emprego, a primeira realmente profissional, em que eu provavelmente não passarei devido a não dominar as tecnologias solicitadas porém estou aqui no Git pra deixar registrado, foi o primeiro projeto grande que eu fiz sozinho e eu gostei bastante da esperiência. Creio que ficou bom, mas como eu não sou expert talvez não tenha ficado, só Deus sabe. Utilizei o framework do React e o CSS foi o css module, achei bastante divertido e simples de usar.
+
+Um cheiro no zoi e fiquem com Deus.

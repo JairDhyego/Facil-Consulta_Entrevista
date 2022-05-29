@@ -1,9 +1,9 @@
 
-
 .infoNext {
-  width: 22rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  margin-top: 2rem;
 }
 
 .infoNext .range {
@@ -22,17 +22,19 @@
 
 .infoNext .range .barra input {
   appearance: none;
+ 
   text-align: start;
   display: block;
   background-color: #483698;
   border-radius: 2px 0px 0px 2px;
-  
+  height: 1rem;
 }
 
-/* .infoNext .range .barra input::-webkit-slider-thumb {
-   
+ .infoNext .range .barra input::-webkit-slider-thumb {
+   appearance: none;
+  height: 0rem;
  }
- */
+ 
 
  
 .infoNext .contagem {

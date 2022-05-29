@@ -1,108 +1,101 @@
 
-import styles from "../PageB/Page.module.css"
-import { Link } from "react-router-dom"
+import styles from "./Page.module.css"
 
 import ImgPrincipalDois from '../../img/desktop2.png';
-import { Title } from './../../shared/components/Title/';
-import { ConjuntoBotao } from './../../shared/components/ConjuntoRanger/index';
-
+import { ConjuntoRanger } from './../../shared/components/ConjuntoRanger/index';
+import { Input } from './../../shared/components/Input/index';
+import { BackButton } from './../../shared/components/BackButton/index';
+import { Subtitulo } from './../../shared/components/Subtitulo/index';
+import { TitleContainer } from './../../shared/components/TitleContainer/index';
+import { Label } from './../../shared/components/Label/index';
+import { Select } from './../../shared/components/Select/index';
 
 
 
 export const PageB = () => {
 
 
+
+
   return (
 
-    <div className={styles.container}>
-      
-   
 
-      <main>
+    <main>
 
-        {/* TEXTO */}
-
-        <div className={styles.conteudos}>
-
-        <Title titulo=" Sobre o atendimento" />
+      <TitleContainer titulo="Sobre o atendimento" />
 
 
-          <div className={styles.Informacoes}>
+      <div className={styles.containerTela2}>
+
+        <div className={styles.InformacoesTela2}>
+
+
+          <form className={styles.FormularioTela2} >
+
+            <BackButton />
+
 
             <div className={styles.subtitulo}>
-
-              <h3> <strong> Detalhes do atendimento</strong> </h3>
+              <Subtitulo texto="Detalhes do atendimento" />
             </div>
 
 
 
-            <form >
+            <div className={styles.conjunto1}>
+              <Select texto="Especialidade principal*"/>
+            </div>
 
-              <div className={styles.conjunto1}>
-                <label
-                  htmlFor="especialidades" > Especialidade Principal*</label>
-
-                <select id="especialidades" >
-                  <option selected  >Selecionar a Especialidade</option>
-                  <option >1</option>
-                  <option >2</option>
-                  <option >3</option>
-                </select>
+            <div className={styles.conjunto2}>
+              <Input texto="Informe o preço da consulta*" type="text" placeholder="Digite o nome completo" />
+              <div className={styles.divDeControle}>
+                <p>R$</p>
+                <Input type="text" placeholder="Valor" />
               </div>
+            </div>
 
-              <div className={styles.conjunto2}>
-                <label htmlFor="preco"> Informe o preço da consulta*</label>
-                <div>
-                  <p>R$</p>
-                  <input id="preco" type="text" placeholder="Valor" />
+
+            <div className={styles.conjunto3}>
+
+              <Label texto="Formas de pagamento da consulta*" />
+
+
+              <div className={styles.formasDePagamento}>
+
+                <div className={styles.forma1}>
+                  <input type="checkbox" id="dinheiro" />
+                  <label htmlFor="dinheiro">Em dinheiro</label>
                 </div>
-              </div>
 
+                <div className={styles.forma2}>
+                  <input type="checkbox" id="pix" />
+                  <label htmlFor="pix">Pix</label>
+                </div>
 
-              <div className={styles.conjunto3}>
-
-                <label >Formas de pagamento da consulta*</label>
-
-
-                <div className={styles.formasDePagamento}>
-
-                  <div className={styles.forma1}>
-                    <input type="checkbox" id="dinheiro" />
-                    <label htmlFor="dinheiro">Em dinheiro</label>
-                  </div>
-
-                  <div className={styles.forma2}>
-                    <input type="checkbox" id="pix" />
-                    <label htmlFor="pix">Pix</label>
-                  </div>
-
-                  <div className={styles.forma3}>
-                    <input type="checkbox" id="cartao" />
-                    <label htmlFor="cartao">Cartão de crédito</label>
-                  </div>
-
+                <div className={styles.forma3}>
+                  <input type="checkbox" id="cartao" />
+                  <label htmlFor="cartao">Cartão de crédito</label>
                 </div>
 
               </div>
-            </form>
+            </div>
 
-            <ConjuntoBotao contagem="2 de 2"  caminho="/terceiraetapa" />
-          </div>
+
+            <ConjuntoRanger contagem="2 de 2" min="50" max="100" caminho="/terceiraetapa" />
+
+          </form>
 
         </div>
 
-        {/* FOTO */}
+
 
 
         <div className={styles.img} >
           <img src={ImgPrincipalDois} alt="Médico explicando" />
-
         </div>
 
+      </div>
 
-      </main>
-
-    </div>
+    </main>
 
 
   );

@@ -1,162 +1,54 @@
-
-.conteudos {
-  width: 40%;
-  margin-right: 6rem;
-  padding-left: 1rem;
-
-}
-
-.subtitulo h3 {
-  font-weight: bold;
-  font-size: 20px;
-  font-family: 'Comfortaa', cursive;
-  margin-bottom: 20px;
-}
-
-
-.conteudo form {
+.containerTela1{
   display: flex;
-  flex-direction: column;
+
 }
+
+.Informacoes1{  
+  width: 50%;
+  margin-right: 2rem; 
+}
+
 
 
 /* CONJUNTOS */
 
 .nome,
 .cpf,
-.tel {
+.tel, .localizacao {
   display: flex;
   flex-direction: column;
+  margin-bottom: 1.5rem;
+  width: 60%;
 }
 
-.nome,
-.cpf,
-label {
-  color: black;
-  font-weight: 600;
-  font-size: 20px;
+.nome{
+  width: 100%;  
 }
 
-
-
-/* PRIMEIRO CONJUNTO */
-.nome {
-  margin-bottom: 2rem;
-}
-
-.nome label {
-  font-size: .9rem;
-  margin-bottom: .5rem;
-}
-
-.nome input {
-  border: 2px solid #483698;
-  height: 2rem;
-  width: 22rem;
-  outline: none;
-  border-radius: .2rem;
-}
-
-.nome select::selection {
-  text-align: center;
-}
-
-/* segundo conjunto */
-
-.cpf {
-  margin-bottom: 1rem;
-}
-
-.cpf label {
-  font-size: .9rem;
-  margin-bottom: 10px;
-}
-
-
-.cpf input {
-  border: 2px solid #483698;
-  height: 1.6rem;
-  width: 15rem;
-}
 
 /* conjunto 3 */
-
-
-.tel {
-  gap: 10px;
-  margin-bottom: 1.5rem;
-  width: 22rem;
-}
 
 .localizacao {
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
-
   flex-direction: row;
-}
-
-.tel label {
-  font-size: .9rem;
-}
-
-.tel input {
-  border: 2px solid #483698;
-  height: 1.6rem;
-  width: 15rem;
-
+  width: 100%;
 }
 
 
-.tel .forma1,
-.forma2,
-.forma3 {
 
-  opacity: .8;
-  margin-bottom: .4rem;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, .6);
-  background-color: #f9f9f9;
-
-  display: flex;
-  width: 22rem;
-  padding: .4rem 0rem;
-  border-radius: .4rem;
-
-}
-
-
-/* conjunto 4 */
-
-
-
-
-
-/*  Segundo lado */
 
 .img {
-  width: 100%;
-
+  width: 50%;
   display: flex;
   align-items: center;
   justify-items: center;
+
 }
 
 .img img {
 
   width: 95%;
   height: 70%;
-  
 }
-
-
-/* MEDIA QUERIES */
-/* 
-@media (max-width: 420px) {
-
-  .container{
-    
-
-  }
- 
-};
- */

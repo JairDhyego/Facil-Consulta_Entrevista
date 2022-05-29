@@ -1,116 +1,76 @@
-
-.container {
-  width: 100vw;
-  height: 100vh;
-  background-color: #ffe766;
-  font-family: 'Open Sans', sans-serif;
-
+.containerTela3 {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  flex-direction: row;
+}
+
+.InformacoesTela3 {
+  width: 50%;
+  margin-right: 2rem;
 }
 
 
-.BotaoDeVoltar{
-  height: 20px;
-  width: 20px;
-  position: relative;
-  top: -20px;
-  left: -410px;
-
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+.nome,
+.cpf,
+.numeroDeContato,
+.localizacao,
+.especialidade,
+.precoDaConsulta,
+.FormasDePagamento {
+ margin-bottom: .3rem;
 }
 
-.conteudos {
-  width: 40%;
-  margin-right: 4rem;
-  padding-left: 1rem;
-}
-
-
-
-.conteudos .formularioFinal {
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
-}
-
-
-.formularioFinal label {
-  font-size: 16px;
-  font-weight: 500px;
-}
-
-
-.formularioFinal div>div {
+.informacoesFinais{
   font-size: 14px;
 }
 
-
-/* botoes */
 
 
 .links {
   display: flex;
   flex-direction: column;
+  margin-top: 2rem;
   justify-content: center;
   align-items: center;
 }
 
-
-
-.botaoDeCadastro {
-  margin-top: 2rem;
+.botaoDeCadastro{
   background-color: #fbde40;
-  color: #282828;
-  text-transform: uppercase;
+  width: 100%;
+  border-radius: .8rem;
+  text-align: center;
+  font-weight: bold;
+  color: #282828 ;
+  padding: .4rem 1rem;
+  transition: all .4s;
+}
+
+.botaoDeCadastro:hover{
+  background-color: #ffe766;}
+
+.editarCadastro{
+  margin-top: 10px;
+  color: #483698;
   width: 100%;
   border-radius: 10px;
   text-align: center;
-  height: 1.8rem;
-  line-height: 1.8rem;
-  font-weight: 600;
-  transition: all .4s;
-  text-decoration: none;
-}
-
-.botaoDeCadastro:hover {
-  background-color: #fff;
-  color: #fbde40;
-  border: 0px solid #fbde40;
-
-}
-
-.editarCadastro {
-  background-color: #fff;
-  color: #483698;
-  width: 15rem;
-  line-height: 10px;
+  height: 1.5rem;
+  line-height: 1.5rem;
   font-weight: bold;
-  font-size: 14px;
-  text-align: center;
-  margin-top: 1.5rem;
+  transition: all .4s;
+  font-size: 11px;
+
 }
-
-
-
-
-/*  Segundo lado */
 
 .img {
   width: 100%;
-
   display: flex;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
 }
 
 .img img {
 
   width: 95%;
   height: 70%;
-  margin-top: 5rem;
-
 }
