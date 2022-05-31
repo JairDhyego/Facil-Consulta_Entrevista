@@ -1,9 +1,21 @@
-.Componentsubtitulo{
+.Subtitulo {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.1rem;
   letter-spacing: -1px;
   font-family: 'Comfortaa', cursive;
   margin-bottom: 20px;
   width: 100%;
- 
+  padding-left: 2.2rem;
+}
+
+@media screen and (max-width: 420px) {
+
+  .Subtitulo {
+    font-size: .9rem;
+    width: 100%;
+    letter-spacing: 0px;
+    padding-left: 1rem;
+
+  }
+
 }

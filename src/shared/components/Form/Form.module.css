@@ -1,0 +1,20 @@
+.nome,
+.cpf,
+.tel, .localizacao {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  width: 60%;
+}
+
+.nome{
+  width: 100%;  
+}
+
+.localizacao {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-direction: row;
+  width: 100%;
+}

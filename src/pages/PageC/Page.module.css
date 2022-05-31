@@ -2,6 +2,8 @@
   display: flex;
   width: 100%;
   flex-direction: row;
+  padding-left: 2.2rem;
+
 }
 
 .InformacoesTela3 {
@@ -17,10 +19,10 @@
 .especialidade,
 .precoDaConsulta,
 .FormasDePagamento {
- margin-bottom: .3rem;
+  margin-bottom: .3rem;
 }
 
-.informacoesFinais{
+.informacoesFinais {
   font-size: 14px;
 }
 
@@ -32,23 +34,28 @@
   margin-top: 2rem;
   justify-content: center;
   align-items: center;
+
+ 
+  
+
 }
 
-.botaoDeCadastro{
+.botaoDeCadastro {
   background-color: #fbde40;
   width: 100%;
   border-radius: .8rem;
   text-align: center;
   font-weight: bold;
-  color: #282828 ;
+  color: #282828;
   padding: .4rem 1rem;
   transition: all .4s;
 }
 
-.botaoDeCadastro:hover{
-  background-color: #ffe766;}
+.botaoDeCadastro:hover {
+  background-color: #ffe766;
+}
 
-.editarCadastro{
+.editarCadastro {
   margin-top: 10px;
   color: #483698;
   width: 100%;
@@ -73,4 +80,58 @@
 
   width: 95%;
   height: 70%;
+}
+
+
+
+@media screen and (max-width: 420px) {
+
+  .containerTela3 {
+    padding-left: 0rem;
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .Informacoes3 {
+    width: 100%;
+  }
+
+  .label {
+    width: 100%;
+
+  }
+
+  .img {
+    display: none;
+  }
+
+  .InformacoesTela3 {
+    width: 100%;
+    margin: 0rem;
+  }
+
+  .formulario {
+    width: 100%;
+    padding: 0rem 1.5rem;
+   
+  }
+  .links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+  }
+
+  .cpf,
+  .tel,
+  .localizacao {
+    width: 75%;
+  }
+
+  .botaoDeCadastro{
+    width: 80%;
+  }
+
+
+
 }

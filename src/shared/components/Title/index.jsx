@@ -1,20 +1,17 @@
-import styles from "../Title/Title.module.css"
+import styles from "./titleContainer.module.css"
 
-/* import { CounterContext } from "../../contexts/CounterContext"
- import { useContext } from "react"
-   const { titulo} = useContext(CounterContext); */
-
-export const Title = ({ titulo }) => {
-
-
+export const Title = ({titulo}) => {
 
   return (
-    <h1 className={styles.title}> {titulo} </h1>
 
-  )
+    <div className={styles.divContainerGeral}> 
+        <h1 className={styles.title}> {titulo} </h1>
+    </div>
+  );
+
 }
 
 
-/* { titulo } 
+/* { titulo }
 
-{titulo} */
+titulo={titulo}  */

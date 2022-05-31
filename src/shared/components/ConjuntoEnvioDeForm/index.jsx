@@ -1,8 +1,7 @@
-import { Botaoproximo } from "../Botaoproximo/index"
 import styles from "./Conjunto.module.css"
 
 
-export const ConjuntoRanger = ({contagem, caminho, min, max}) => {
+export const ConjuntoEnvioDeForm = ({ contagem, caminho, submit, min, max }) => {
 
   return (
 
@@ -13,9 +12,7 @@ export const ConjuntoRanger = ({contagem, caminho, min, max}) => {
         </div>
         <div className={styles.contagem}> {contagem}</div>
       </div>
-
-      <Botaoproximo proximo="Próximo" caminho={caminho} />
-
+      <button type={submit} className={styles.spanEnvio} >  próximo </button>
     </div>
   );
 }

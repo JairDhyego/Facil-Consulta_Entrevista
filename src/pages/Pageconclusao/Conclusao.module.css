@@ -1,13 +1,13 @@
 .containerFinal{
 
-  width: 100%;
+  width: 95%;
   height: 100%;
-
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  padding: 1rem;
+  
 }
-
 
 
 .sair {
@@ -23,13 +23,19 @@
   transition: all .4s;
   text-decoration: none;
   padding: 1rem 1rem;
-  align-self: flex-end;
- 
-  
+  align-self: flex-end;  
 }
 
 .sair:hover {
   background-color: #fff;
   color: #fbde40;
   border: 0px solid #fbde40;
+}
+
+
+@media screen and (max-width: 420px){
+  .containerFinal{
+    width: 80%;
+   
+  }
 }

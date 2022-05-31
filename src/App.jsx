@@ -1,31 +1,17 @@
-
 import "./index.css";
 import "./mobile.css";
-import { AppRoutes } from './routes/';
+import { AppRoutes } from "./routes/";
 
-
-/* importar o arquivo
-import UserProvider from "./shared/contexts/CounterContext"
-e coloca em torno do principal como o Browser. 
-
-      <UserProvider>
-      </UserProvider>
-*/
-
-
-
-
+import UserProvider from "./shared/contexts/index";
 
 function App() {
-
-
-
   return (
-
-    <div >
-      < AppRoutes />
-    </div >
-  )
+    <div>
+      <UserProvider>
+        <AppRoutes />
+      </UserProvider>
+    </div>
+  );
 }
 
-export default App
+export default App;

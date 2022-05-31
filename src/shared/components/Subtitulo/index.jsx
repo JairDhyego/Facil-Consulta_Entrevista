@@ -5,6 +5,6 @@ export const Subtitulo = ({ texto }) => {
 
   return (
 
-    <p className={styles.Componentsubtitulo} >  {texto}   </p>
+    <h2 className={styles.Subtitulo} > {texto}  </h2>
   );
 }

@@ -1,0 +1,30 @@
+.divContainerGeral {
+  width: 100%;
+}
+
+
+.title {
+  font-family: 'Comfortaa', cursive;
+  color: #483698;
+  font-weight: bolder;
+  font-size: 2rem;
+  width: 100%;
+  padding-left: 2.2rem;
+  text-align: start;
+
+}
+
+
+
+
+@media screen and (max-width: 420px) {
+
+  .title {
+    font-size: 1.6rem;
+    width: 100%;
+    padding-left: 1rem;
+    
+  
+  }
+
+}

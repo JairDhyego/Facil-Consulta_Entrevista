@@ -1,18 +1,20 @@
 .containerTela2 {
   display: flex;
   width: 100%;
+  padding-left: 2.2rem;
+
 }
 
-.InformacoesTela2{
+.InformacoesTela2 {
   width: 70%;
 
 }
 
-.FormularioTela2{
+.FormularioTela2 {
   width: 100%;
 }
 
-.subtitulo{
+.subtitulo {
   width: auto;
 }
 
@@ -25,21 +27,46 @@
 }
 
 
-.conjunto1 option{
+.conjunto1 option {
   border: #483698;
   outline: none;
   height: 1.5rem;
   line-height: 1.5rem;
 }
 
-.conjunto1 .regiao{
-  border: 2px solid  #483698;
+.conjunto1 .regiao {
+  border: 2px solid #483698;
   outline: none;
   height: 1.5rem;
   line-height: 1.5rem;
 }
 
-.conjunto2 .divDeControle{
+.textInput {
+  border: 1px solid #483698;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  outline: none;
+  border-radius: .2rem;
+  color: #282828;
+}
+
+.textInput::placeholder {
+  color: #b9b9b9;
+  padding: 0rem .1rem;
+}
+
+.label {
+  font-weight: 600;
+  font-size: .8rem;
+  margin-bottom: .1rem;
+}
+
+.errorInput {
+  border: 2px solid #dc3545;
+  display: none;
+}
+
+.conjunto2 .divDeControle {
   display: flex;
   align-items: center;
   justify-items: center;
@@ -62,6 +89,14 @@
   top: -1px;
 }
 
+.errorSPan {
+  font-size: 12px;
+  color: #dc3545;
+  font-weight: 400;
+
+  position: absolute;
+  margin-top: 50px;
+}
 
 
 .img {
@@ -75,4 +110,47 @@
 
   width: 95%;
   height: 70%;
+}
+
+
+
+@media screen and (max-width: 420px) {
+
+  .containerTela2 {
+    flex-direction: column;
+    max-width: 100%;
+    padding-left: 1rem;
+  }
+
+  .InformacoesTela2 {
+    width: 90%;
+  }
+
+  .FormularioTela2 {
+    width: 100%;
+  }
+
+
+  .label {
+    width: 100%;
+
+  }
+
+  .img {
+    display: none;
+  }
+
+  .formulario {
+    width: 100%;
+    padding-left: 0rem;
+
+  }
+
+  .cpf,
+  .tel,
+  .localizacao {
+    width: 75%;
+  }
+
+
 }

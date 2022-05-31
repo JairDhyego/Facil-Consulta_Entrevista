@@ -15,10 +15,9 @@ export const Select = ({ texto, options, callbackSetState }) => {
   return (
 
     <div className={styles.regiao}>
-
-      <Label texto={texto} />
-      <select onChange={(e) => { setIdState(e) }} >
-        <option selected value="">Escolha</option>
+      <Label texto={texto}  />
+      <select onChange={(e) => { setIdState(e) }}  >
+        <option  selected value="">Escolha</option>
         {options && options.map((option) => (
           <option value={option.id} key={option.id}>{option.nome}</option>
         )

@@ -1,32 +1,29 @@
-.containerTela1{
+.containerTela1 {
   display: flex;
-
+  padding-left: 2.2rem;
 }
 
-.Informacoes1{  
+.Informacoes1 {
   width: 50%;
-  margin-right: 2rem; 
 }
-
 
 
 /* CONJUNTOS */
 
 .nome,
 .cpf,
-.tel, .localizacao {
+.tel,
+.localizacao {
   display: flex;
   flex-direction: column;
   margin-bottom: 1.5rem;
   width: 60%;
 }
 
-.nome{
-  width: 100%;  
+.nome {
+  width: 100%;
 }
 
-
-/* conjunto 3 */
 
 .localizacao {
   display: flex;
@@ -36,8 +33,44 @@
   width: 100%;
 }
 
+.textInput {
+  border: 1px solid #483698;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  outline: none;
+  border-radius: .2rem;
+  color: #282828;
+}
+
+.textInput::placeholder {
+  color: #b9b9b9;
+  padding: 0rem .3rem;
+}
+
+.label {
+  font-weight: 600;
+  font-size: .8rem;
+  margin-bottom: .1rem;
+}
+
+.regiao {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-right: .5rem;
+}
+
+.regiao select {
+  border: 2px solid #483698;
+  width: 90%;
+  border-radius: .2rem;
+  height: 1.6rem;
+  line-height: 1.6rem;
+}
 
 
+
+/* IMAGEM */
 
 .img {
   width: 50%;
@@ -51,4 +84,58 @@
 
   width: 95%;
   height: 70%;
+}
+
+
+.errorSPan {
+  font-size: 12px;
+  color: #dc3545;
+  font-weight: 400;
+
+  position: absolute;
+  margin-top: 50px;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 420px) {
+
+  .containerTela1 {
+    flex-direction: column;
+    max-width: 100%;
+    padding-left: 0rem;
+  }
+
+  .Informacoes1 {
+    width: 100%;
+  }
+
+  .label {
+    width: 100%;
+
+  }
+
+  .img {
+    display: none;
+  }
+
+  .formulario {
+    width: 90%;
+    padding-left: 1rem;
+  }
+
+  .cpf,
+  .tel {
+    width:75%;
+  }
+
+  .localizacao {
+    width: 100%;
+  }
+
+
 }
