@@ -14,6 +14,9 @@ import schema from "./../../shared/Validation/index";
 
 import { useContext } from "react";
 import { UserContext } from "../../shared/contexts";
+import { Label } from "./../../shared/components/Label/index";
+import { Link } from "react-router-dom";
+import { Botaoproximo } from "./../../shared/components/Botaoproximo/index";
 
 export const onSubmit = ({ nome, cpf, tel }) => {
   const data = { nome, cpf, tel };
@@ -80,6 +83,7 @@ export const Inicio = () => {
 
   return (
     <main>
+      <BackButton />
       <Title titulo="Sobre o profissional" />
 
       <div className={styles.subtitulo}>
@@ -89,12 +93,8 @@ export const Inicio = () => {
       <div className={styles.containerTela1}>
         <div className={styles.Informacoes1}>
           <form onSubmit={handleSubmit(onSubmit)} className={styles.formulario}>
-            <BackButton />
-
             <div className={styles.nome}>
-              <label htmlFor="name" className={styles.label}>
-                Nome completo*
-              </label>
+              <Label texto="Nome completo*" />
               <input
                 id="name"
                 className={styles.textInput}
@@ -108,9 +108,7 @@ export const Inicio = () => {
             </div>
 
             <div className={styles.cpf}>
-              <label htmlFor="cpf" className={styles.label}>
-                CPF*
-              </label>
+              <Label texto="CPF*" />
               <input
                 id="cpf"
                 className={styles.textInput}
@@ -126,9 +124,7 @@ export const Inicio = () => {
             </div>
 
             <div className={styles.tel}>
-              <label htmlFor="tel" className={styles.label}>
-                Número de celular*
-              </label>
+              <Label texto="Número de celular*" />
               <input
                 id="tel"
                 className={styles.textInput}
@@ -155,13 +151,9 @@ export const Inicio = () => {
               </div>
             </div>
 
-            <ConjuntoEnvioDeForm
-              type="submit"
-              contagem="1 de 2"
-              min="0"
-              max="50"
-              caminho="/segundaetapa"
-            />
+            <ConjuntoEnvioDeForm contagem="1 de 2" />
+
+            <Botaoproximo to="/segundaetapa" proximo="Próximo" />
           </form>
         </div>
 

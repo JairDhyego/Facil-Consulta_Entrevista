@@ -14,6 +14,7 @@ import * as yup from "yup";
 import { useContext } from "react";
 import { UserContext } from "../../shared/contexts";
 import { Subtitulo } from "./../../shared/components/Subtitulo/index";
+import { Botaoproximo } from './../../shared/components/Botaoproximo/index';
 
 const schema = yup
   .object({
@@ -56,11 +57,12 @@ export const PageB = () => {
     ) {
       return;
     }
-    return <span> Valor errado</span>;
+    return <span className={styles.errorSPan}> Valor errado</span>;
   };
 
   return (
     <main>
+      <BackButton />
       <Title titulo="Sobre o atendimento" />
 
       <div className={styles.subtitulo}>
@@ -73,16 +75,12 @@ export const PageB = () => {
             className={styles.FormularioTela2}
             onSubmit={handleSubmit(onSubmit)}
           >
-            <BackButton />
-
             <div className={styles.conjunto1}>
               <Select texto="Especialidade principal*" options={skil} />
             </div>
 
             <div className={styles.conjunto2}>
-              <label htmlFor="preco" className={styles.label}>
-                informe o preço da consulta
-              </label>
+              <Label texto="Informe o preço da consulta*" />
               <div className={styles.divDeControle}>
                 <p>R$</p>
                 <input
@@ -106,27 +104,28 @@ export const PageB = () => {
               <div className={styles.formasDePagamento}>
                 <div className={styles.forma1}>
                   <input type="checkbox" id="dinheiro" />
-                  <label htmlFor="dinheiro">Em dinheiro</label>
+                  <Label texto="Em Dinheiro" />
                 </div>
 
                 <div className={styles.forma2}>
                   <input type="checkbox" id="pix" />
-                  <label htmlFor="pix">Pix</label>
+                  <Label texto="Pix" />
                 </div>
 
                 <div className={styles.forma3}>
                   <input type="checkbox" id="cartao" />
-                  <label htmlFor="cartao">Cartão de crédito</label>
+                  <Label texto="Cartão de crédito" />
                 </div>
               </div>
             </div>
 
             <ConjuntoEnvioDeForm
               contagem="2 de 2"
-              min="50"
-              max="100"
+              min={0}
+              max={100}
               caminho="/terceiraetapa"
             />
+            <Botaoproximo to="/segundaetapa" proximo="Próximo" />
           </form>
         </div>
 

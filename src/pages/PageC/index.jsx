@@ -4,22 +4,17 @@ import ImgPrincipalTres from "../../img/desktop3.png";
 
 import { Label } from "./../../shared/components/Label/index";
 import { Title } from "./../../shared/components/Title";
-import { useContext } from 'react';
+import { useContext } from "react";
 import { UserContext } from "../../shared/contexts";
+import { BackButton } from './../../shared/components/BackButton/index';
 
 export const PageC = () => {
-
-  const {
-    skil,    
-    valorInserido,    
-    estados,    
-    city,    
-    profissional,
-      } = useContext(UserContext);
-
+  const { skil, valorInserido, estados, city, profissional } =
+    useContext(UserContext);
 
   return (
     <main>
+      <BackButton />
       <Title titulo="Revisão de cadastro" />
 
       <div className={styles.containerTela3}>
@@ -27,7 +22,9 @@ export const PageC = () => {
           <form className={styles.formulario}>
             <div className={styles.nome}>
               <Label texto="Nome completo" />
-              <div className={styles.informacoesFinais}>Jair Dhyego Silva do Nascimento</div>
+              <div className={styles.informacoesFinais}>
+                Jair Dhyego Silva do Nascimento
+              </div>
             </div>
 
             <div className={styles.cpf}>
@@ -64,11 +61,10 @@ export const PageC = () => {
 
             <div className={styles.links}>
               <Link to="/cadastroconluido" className={styles.botaoDeCadastro}>
-                
                 Cadastrar profissional
               </Link>
 
-              <Link to="/" className={styles.editarCadastro}>                
+              <Link to="/" className={styles.editarCadastro}>
                 Editar cadastro
               </Link>
             </div>

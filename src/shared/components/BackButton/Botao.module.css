@@ -1,8 +1,13 @@
 .BotaoDeVoltar{
   height: 40px;
   width: 40px;
-  position: absolute;
-  top: 25px;
-  border: none; 
+  position: relative;
+  top: -3.2rem;
+  border: none;   
   
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+

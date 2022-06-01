@@ -1,10 +1,12 @@
-import styles from "./Conjunto.module.css"
+import styles from "./Conjunto.module.css";
 
-
-export const ConjuntoEnvioDeForm = ({ contagem, caminho, submit, min, max }) => {
-
+export const ConjuntoEnvioDeForm = ({
+  contagem,
+  submit,
+  min,
+  max,
+}) => {
   return (
-
     <div className={styles.infoNext}>
       <div className={styles.range}>
         <div className={styles.barra}>
@@ -12,8 +14,6 @@ export const ConjuntoEnvioDeForm = ({ contagem, caminho, submit, min, max }) => 
         </div>
         <div className={styles.contagem}> {contagem}</div>
       </div>
-      <button type={submit} className={styles.spanEnvio} >  próximo </button>
     </div>
   );
-}
-
+};

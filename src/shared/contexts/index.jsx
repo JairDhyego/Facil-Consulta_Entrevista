@@ -10,6 +10,8 @@ function UserProvider({ children }) {
   const [skil, setSkil] = useState([]);
   const [valorInserido, setValorInserido] = useState();
 
+
+
   return (
     <UserContext.Provider
       value={{
