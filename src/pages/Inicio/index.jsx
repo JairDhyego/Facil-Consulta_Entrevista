@@ -1,39 +1,50 @@
 import styles from "./Inicio.module.css";
 import ImgPrincipalUm from "../../img/desktop1.png";
+
 import { Select } from "./../../shared/components/Select/index";
 import { Subtitulo } from "./../../shared/components/Subtitulo/index";
 import { Title } from "../../shared/components/Title";
-import { ConjuntoEnvioDeForm } from "../../shared/components/ConjuntoEnvioDeForm/index";
-import { BackButton } from "./../../shared/components/BackButton/index";
-
-import { useEffect } from "react";
-
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import schema from "./../../shared/Validation/index";
-
-import { useContext } from "react";
-import { UserContext } from "../../shared/contexts";
 import { Label } from "./../../shared/components/Label/index";
+import { ConjuntoEnvioDeForm } from "../../shared/components/ConjuntoEnvioDeForm/index";
 import { Link } from "react-router-dom";
 import { Botaoproximo } from "./../../shared/components/Botaoproximo/index";
 
-export const onSubmit = ({ nome, cpf, tel }) => {
-  const data = { nome, cpf, tel };
-  console.log(data);
-};
+import { useState, useEffect } from "react";
+
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { schema } from "./../../shared/Validation/index";
+
+import { useContext } from "react";
+import { UserContext } from "../../shared/contexts";
 
 export const Inicio = () => {
-  const {
-    estados,
-    setEstados,
-    city,
-    setCity,
-    stateSelected,
-    setStateSelected,
-    profissional,
-    setProfissional,
-  } = useContext(UserContext);
+  const [estados, setEstados] = useState([]);
+  const [city, setCity] = useState([]);
+  const [stateSelected, setStateSelected] = useState("");
+  const [profissional, setProfissional] = useState("");
+
+  const { setFormData } = useContext(UserContext);
+
+  const onSubmit = () => {
+    if (
+      !(
+        estados.length === 0 ||
+        city.length === 0 ||
+        stateSelected === "" ||
+        profissional === ""
+      )
+    ) {
+      setFormData({
+        estados: estados,
+        city: city,
+        stateSelected: stateSelected,
+        profissional: profissional,
+      });
+
+      document.getElementById("link").click();
+    }
+  };
 
   async function loadStates() {
     let response = await fetch(
@@ -74,16 +85,13 @@ export const Inicio = () => {
   const {
     register,
     handleSubmit,
-    getValues,
     formState: { errors },
-    reset,
   } = useForm({
     resolver: yupResolver(schema),
   });
 
   return (
     <main>
-      <BackButton />
       <Title titulo="Sobre o profissional" />
 
       <div className={styles.subtitulo}>
@@ -119,8 +127,6 @@ export const Inicio = () => {
               {errors.cpf && (
                 <span className={styles.errorSPan}>Error message</span>
               )}
-
-              {/* profissional && <span className={styles.errorSPan}> CPF já cadastrado.</span> */}
             </div>
 
             <div className={styles.tel}>
@@ -151,9 +157,15 @@ export const Inicio = () => {
               </div>
             </div>
 
-            <ConjuntoEnvioDeForm contagem="1 de 2" />
+            <ConjuntoEnvioDeForm
+              contagem="1 de 2"
+              min="0"
+              max="50"
+              value="50"
+            />
 
-            <Botaoproximo to="/segundaetapa" proximo="Próximo" />
+            <Botaoproximo proximo="Próximo" />
+            <Link to="/segundaetapa" id="link" />
           </form>
         </div>
 

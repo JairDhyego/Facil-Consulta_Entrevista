@@ -1,13 +1,14 @@
 @media screen and (max-width: 420px) {
 
 
-  html, body{
+  html,
+  body {
     max-width: 100%;
     max-height: 100vh;
   }
 
 
-  :root{
+  :root {
     width: 100%;
     max-height: 100vh;
   }
@@ -17,7 +18,7 @@
     position: relative;
     bottom: -35px;
     border-radius: 2.5rem 2.5rem 0rem 0rem;
-    height: 100vh;  
+    height: 90vh;
     padding: 0;
   }
 }

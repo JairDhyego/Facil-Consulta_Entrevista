@@ -1,5 +1,5 @@
 
-.botaDeProximo {
+.botaoDeProximo {
   background-color: #483698;
   color: #fff;
   text-transform: uppercase;
@@ -13,7 +13,7 @@
   border: none;
 }
 
-.botaDeProximo:hover {
+.botaoDeProximo:hover {
   background-color: #fff;
   color: #483698;
 }

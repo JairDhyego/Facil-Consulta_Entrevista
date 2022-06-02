@@ -2,12 +2,9 @@
   height: 40px;
   width: 40px;
   position: relative;
-  top: -3.2rem;
-  border: none;   
-  
-
+  top: -3.4rem;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-

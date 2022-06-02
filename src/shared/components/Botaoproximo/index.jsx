@@ -1,14 +1,9 @@
-import styles from "../Botaoproximo/Botaoproximo.module.css"
+import styles from "../Botaoproximo/Botaoproximo.module.css";
 
-
-export const Botaoproximo = ({proximo, caminho}) => {
-
+export const Botaoproximo = ({ proximo}) => {
   return (
-    <button to={caminho} className={styles.botaDeProximo}> {proximo} </button>
-
-  )
-
-} 
-
-
- 
+    <button className={styles.botaoDeProximo}>
+     {proximo}
+    </button>
+  );
+};

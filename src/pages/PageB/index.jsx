@@ -5,26 +5,34 @@ import { ConjuntoEnvioDeForm } from "./../../shared/components/ConjuntoEnvioDeFo
 import { BackButton } from "./../../shared/components/BackButton/index";
 import { Label } from "./../../shared/components/Label/index";
 import { Select } from "./../../shared/components/Select/index";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Title } from "./../../shared/components/Title";
 
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
 import { useContext } from "react";
 import { UserContext } from "../../shared/contexts";
 import { Subtitulo } from "./../../shared/components/Subtitulo/index";
-import { Botaoproximo } from './../../shared/components/Botaoproximo/index';
-
-const schema = yup
-  .object({
-    valor: yup.string().min().max().required("Error message"),
-  })
-  .required();
+import { Link } from "react-router-dom";
+import { Botaoproximo } from "./../../shared/components/Botaoproximo/index";
+import { schema2 } from "./../../shared/Validation/index";
 
 export const PageB = () => {
-  const { skil, setSkil, valorInserido, setValorInserido } =
-    useContext(UserContext);
+  const [skil, setSkil] = useState([]);
+  const [valorInserido, setValorInserido] = useState();
+
+  const { formData, setFormData } = useContext(UserContext);
+
+  const onSubmit = () => {
+    if (skil.length !== 0 || valorInserido !== undefined) {
+      setFormData({
+        ...formData,
+        skil: skil,
+        valorInserido: valorInserido,
+      });
+      document.getElementById("link2").click();
+    }
+  };
 
   async function loadSkil() {
     let response = await fetch(
@@ -39,12 +47,8 @@ export const PageB = () => {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(schema),
+    resolver: yupResolver(schema2),
   });
-
-  const onSubmit = (data) => {
-    console.log(data);
-  };
 
   useEffect(() => {
     loadSkil();
@@ -52,7 +56,7 @@ export const PageB = () => {
 
   const validarQuantia = () => {
     if (
-      (valorInserido >= 30 && valorInserido <= 250) ||
+      (valorInserido >= 30 && valorInserido <= 350) ||
       valorInserido === undefined
     ) {
       return;
@@ -89,9 +93,12 @@ export const PageB = () => {
                   type="text"
                   placeholder="Valor"
                   {...register("valor")}
-                  onChange={(e) => setValorInserido(e.target.value)}
+                  onChange={(e) => {
+                    setValorInserido(e.target.value);
+                  }}
                 />
-                {errors.valor && (
+                {((errors.valor && valorInserido < 30) ||
+                  valorInserido > 350) && (
                   <span className={styles.errorSPan}>Error message</span>
                 )}
                 {validarQuantia()}
@@ -121,11 +128,12 @@ export const PageB = () => {
 
             <ConjuntoEnvioDeForm
               contagem="2 de 2"
-              min={0}
-              max={100}
-              caminho="/terceiraetapa"
+              min="0"
+              max="100"
+              value="100"
             />
-            <Botaoproximo to="/segundaetapa" proximo="Próximo" />
+            <Botaoproximo proximo="Próximo" />
+            <Link to="/terceiraetapa" id="link2" />
           </form>
         </div>
 

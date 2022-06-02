@@ -1,4 +1,4 @@
-import { useState, createContext, useEffect } from "react";
+import { useState, createContext } from "react";
 
 export const UserContext = createContext({});
 
@@ -10,6 +10,9 @@ function UserProvider({ children }) {
   const [skil, setSkil] = useState([]);
   const [valorInserido, setValorInserido] = useState();
 
+  const [formData, setFormData ] = useState({});
+
+  console.log(formData)
 
 
   return (
@@ -27,6 +30,8 @@ function UserProvider({ children }) {
         setSkil,
         valorInserido,
         setValorInserido,
+        formData,
+        setFormData
       }}
     >
       {children}

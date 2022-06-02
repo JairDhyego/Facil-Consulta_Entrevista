@@ -11,7 +11,8 @@ export const BackButton = () => {
   const navigate = useNavigate();
 
   const returnPage = () => {
-    navigate(-1)
+
+      navigate(-1);
   }
 
 

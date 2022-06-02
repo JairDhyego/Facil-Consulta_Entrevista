@@ -9,7 +9,7 @@ import { UserContext } from "../../shared/contexts";
 import { BackButton } from './../../shared/components/BackButton/index';
 
 export const PageC = () => {
-  const { skil, valorInserido, estados, city, profissional } =
+  const {formData} =
     useContext(UserContext);
 
   return (
@@ -23,40 +23,40 @@ export const PageC = () => {
             <div className={styles.nome}>
               <Label texto="Nome completo" />
               <div className={styles.informacoesFinais}>
-                Jair Dhyego Silva do Nascimento
+           
               </div>
             </div>
 
             <div className={styles.cpf}>
-              <Label texto="CPF" />
-              <div>00000000000</div>
+              <Label texto={formData.cpf} />
+              <div></div>
             </div>
 
             <div className={styles.numeroDeContato}>
               <Label texto="Número de celular ou telefone" />
-              <div className={styles.informacoesFinais}> 84 992062216</div>
+              <div className={styles.informacoesFinais}></div>
             </div>
 
             <div className={styles.localizacao}>
               <Label texto="Estado/Cidade" />
               <div className={styles.informacoesFinais}>
-                {city} / {estados}
+                 / 
               </div>
             </div>
 
             <div className={styles.especialidade}>
               <Label texto="Especialidade principal" />
-              <div className={styles.informacoesFinais}>{skil}</div>
+              <div className={styles.informacoesFinais}></div>
             </div>
 
             <div className={styles.precoDaConsulta}>
               <Label texto="Preço da consulta" />
-              <div className={styles.informacoesFinais}>R$ 250.00</div>
+              <div className={styles.informacoesFinais}>R$ </div>
             </div>
 
             <div className={styles.FormasDePagamento}>
               <Label texto="Formas de pagamento da consulta" />
-              <div className={styles.informacoesFinais}> Cartão </div>
+              <div className={styles.informacoesFinais}>  </div>
             </div>
 
             <div className={styles.links}>
